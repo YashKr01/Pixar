@@ -1,4 +1,30 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        glide_version = "4.15.1"
+        retrofit_version = "2.9.0"
+        room_version = "2.5.1"
+        navigation_version = "2.5.3"
+        datastore_version = "1.0.0"
+        splash_version = "1.0.1"
+        canary_version = "2.10"
+        chucker_version = "3.5.2"
+        shimmer_version = "0.5.0"
+        version_name = "1.0.0"
+        lottie_version = "6.0.0"
+        version_code = 1
+        min_sdk_version = 24
+        target_sdk_version = 33
+        compile_sdk_version = 33
+        application_id = "com.techk.pixar"
+    }
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version")
+    }
+}
 plugins {
     id 'com.android.application' version '8.0.0' apply false
     id 'com.android.library' version '8.0.0' apply false

@@ -1,4 +1,4 @@
-package com.example.pixar
+package com.techk.pixar
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

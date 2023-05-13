@@ -1,4 +1,4 @@
-package com.example.pixar
+package com.techk.pixar
 
 import org.junit.Test
 
