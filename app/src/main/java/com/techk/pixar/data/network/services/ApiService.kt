@@ -1,6 +1,7 @@
-package com.techk.pixar.data.network
+package com.techk.pixar.data.network.services
 
 import com.techk.pixar.BuildConfig
+import com.techk.pixar.data.network.responses.UnsplashApiResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

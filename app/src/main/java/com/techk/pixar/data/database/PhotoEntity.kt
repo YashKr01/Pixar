@@ -2,8 +2,8 @@ package com.techk.pixar.data.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.techk.pixar.data.network.Urls
-import com.techk.pixar.data.network.User
+import com.techk.pixar.data.network.responses.Urls
+import com.techk.pixar.data.network.responses.User
 import com.techk.pixar.utils.Constants
 
 @Entity(tableName = Constants.TABLE_NAME)

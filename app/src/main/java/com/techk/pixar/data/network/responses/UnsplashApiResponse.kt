@@ -1,4 +1,4 @@
-package com.techk.pixar.data.network
+package com.techk.pixar.data.network.responses
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

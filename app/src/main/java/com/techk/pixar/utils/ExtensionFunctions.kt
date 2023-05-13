@@ -12,7 +12,7 @@ import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.techk.pixar.data.database.PhotoEntity
-import com.techk.pixar.data.network.UnsplashApiResponseItem
+import com.techk.pixar.data.network.responses.UnsplashApiResponseItem
 import java.util.UUID
 
 fun View.hide() {
