@@ -4,6 +4,10 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
+data class UnsplashApiResponse(
+    @SerializedName("results") val list: List<UnsplashApiResponseItem>
+)
+
 @Parcelize
 data class UnsplashApiResponseItem(
     @SerializedName("id") val id: String?,
