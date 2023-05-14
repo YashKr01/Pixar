@@ -32,6 +32,8 @@ suspend fun <T : Any> safeNetworkCall(
     call: suspend () -> Response<T>
 ): Flow<Resource<T>> = flow {
 
+    emit(Resource.Loading())
+
     runCatching {
         val response = call.invoke()
         when (response.isSuccessful && response.body() != null) {
