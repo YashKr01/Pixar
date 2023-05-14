@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
 class ConnectionObserver(
-    private val context: Context
+    context: Context
 ) : ConnectivityObserver {
 
     private val connectivityManager =
@@ -18,6 +18,7 @@ class ConnectionObserver(
 
     override fun observeConnection(): Flow<Boolean> {
         return callbackFlow {
+
             val callback = object : ConnectivityManager.NetworkCallback() {
 
                 override fun onAvailable(network: Network) {
