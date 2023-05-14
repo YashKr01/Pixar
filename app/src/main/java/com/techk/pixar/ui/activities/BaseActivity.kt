@@ -1,18 +1,22 @@
 package com.techk.pixar.ui.activities
 
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity<T: ViewBinding>: AppCompatActivity() {
+abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(binding.root)
+    private var _binding: T? = null
+    abstract val bindingInflater: (LayoutInflater) -> T
 
-        initViews()
-        setObservers()
+    protected val binding: T
+        get() = _binding as T
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        _binding = bindingInflater.invoke(layoutInflater)
+        setContentView(requireNotNull(_binding).root)
 
     }
 
@@ -20,6 +24,9 @@ abstract class BaseActivity<T: ViewBinding>: AppCompatActivity() {
 
     abstract fun setObservers()
 
-    abstract val binding: T
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
 }
