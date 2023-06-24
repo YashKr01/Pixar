@@ -1,4 +1,4 @@
-package com.techk.pixar.ui.activities
+package com.techk.pixar.app.screens
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,20 +1,19 @@
-package com.techk.pixar.data.network.responses
+package com.techk.pixar.data.models
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 data class UnsplashApiResponse(
-    @SerializedName("results") val list: List<UnsplashApiResponseItem>
+    @SerializedName("results") val list: List<PhotoDto>
 )
 
-@Parcelize
-data class UnsplashApiResponseItem(
+data class PhotoDto(
     @SerializedName("id") val id: String?,
     @SerializedName("likes") val likes: Int?,
     @SerializedName("urls") val urls: Urls?,
     @SerializedName("user") val user: User?,
-) : Parcelable
+)
 
 @Parcelize
 data class Urls(

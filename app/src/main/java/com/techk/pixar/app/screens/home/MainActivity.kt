@@ -1,7 +1,8 @@
-package com.techk.pixar.ui.activities
+package com.techk.pixar.app.screens.home
 
 import android.view.LayoutInflater
 import com.techk.pixar.databinding.ActivityMainBinding
+import com.techk.pixar.app.screens.BaseActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
